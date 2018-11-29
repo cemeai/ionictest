@@ -11,6 +11,7 @@ import { ContactPageModule } from '../contact/contact.module';
 import { SettingsPageModule } from '../settings/settings.module';
 import { AboutPageModule } from '../about/about.module';
 import { HomePageModule } from '../home/home.module';
+import { NewsPageModule } from '../news/news.module';
 
 @NgModule({
   imports: [
@@ -21,7 +22,8 @@ import { HomePageModule } from '../home/home.module';
     HomePageModule,
     AboutPageModule,
     ContactPageModule,
-    SettingsPageModule
+    SettingsPageModule,
+    NewsPageModule
   ],
   declarations: [TabsPage]
 })

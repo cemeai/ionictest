@@ -1,9 +1,22 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>news</ion-title>
+    <ion-title>News</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-
+    <ion-searchbar
+        [showCancelButton]="shouldShowCancel"
+        (ionInput)="onInput($event)"
+        (ionCancel)="onCancel($event)">
+    </ion-searchbar>
+    <ion-card *ngFor="let article of data?.articles" (click)="single_page(article)">
+        <!-- <ion-img [src]="article.urlToImage"></ion-img> --> 
+        <ion-card-header>
+            <ion-card-title>{{article.title}}</ion-card-title>
+        </ion-card-header>
+            <ion-card-content>
+                <p>{{article.title}}</p>
+            </ion-card-content>
+    </ion-card>
 </ion-content>
